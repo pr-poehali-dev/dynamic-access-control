@@ -36,7 +36,7 @@ export default function Index() {
       <header className="header">
         <div className="logo" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img
-            src="https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/a206f501-6a79-4a1a-9994-de269686ba50.jpg"
+            src="https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/6395c2c3-96fa-4b4a-b355-c60bbf0f7188.jpg"
             alt="Тортик от Котика"
             style={{ height: "52px", width: "52px", objectFit: "contain", borderRadius: "50%" }}
           />
