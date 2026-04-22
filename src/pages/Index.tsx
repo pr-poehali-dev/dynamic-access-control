@@ -224,6 +224,38 @@ export default function Index() {
           </div>
         </section>
 
+        <section className="section-padding" style={{ background: "#fafafa" }}>
+          <h2 className="section-title" style={{ marginBottom: "12px", textAlign: "center" }}>
+            АВТОРСКИЕ ТОРТЫ
+          </h2>
+          <p style={{ textAlign: "center", color: "#666", marginBottom: "40px", fontSize: "16px" }}>
+            Нестандартные идеи, уникальный дизайн — торт как произведение искусства
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+            gap: "16px",
+          }}>
+            {[
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/e338f113-756c-4dff-9f07-a0372c067f1f.jpg", alt: "Торт мешок с деньгами" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/3806809f-9d65-4609-b24e-2751594585b4.jpg", alt: "Торт корона" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/4d4e0ba3-0b00-4dae-97b9-adfbb2a86c15.jpg", alt: "Торт книга" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/d99a8a2d-d56e-4f6b-a825-8f8ab1bcc363.jpg", alt: "Торт кот на колбасе" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/0b848aad-ae82-4c72-9bef-7d7032079b78.jpg", alt: "Торт золотая рыбка" },
+            ].map((img) => (
+              <div key={img.src} style={{ overflow: "hidden", aspectRatio: "3/4" }}>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.4s ease" }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="retro-vibe">
           <div>
             <h2 className="vibe-title">СДЕЛАНО С ДУШОЙ.</h2>
