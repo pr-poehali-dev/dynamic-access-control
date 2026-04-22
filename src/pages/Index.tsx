@@ -4,7 +4,7 @@ export default function Index() {
       <div className="grain-overlay" />
 
       <header className="header">
-        <div className="logo">CAKE*STUDIO</div>
+        <div className="logo">ТОРТИК*ОТ*КОТИКА</div>
         <nav>
           <a href="#">Торты</a>
           <a href="#">О нас</a>
@@ -175,7 +175,7 @@ export default function Index() {
 
         <section className="section-padding">
           <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
-            @CAKE.STUDIO
+            @ТОРТИК.ОТ.КОТИКА
           </h2>
           <div className="social-grid">
             <div className="social-item">
@@ -208,7 +208,7 @@ export default function Index() {
 
       <footer>
         <div>
-          <div className="footer-logo">CAKE*STUDIO</div>
+          <div className="footer-logo">ТОРТИК*ОТ*КОТИКА</div>
           <p style={{ color: "#666", lineHeight: 1.6 }}>
             Студия авторских тортов на заказ. Каждый торт — ручная работа с любовью к деталям.
           </p>
