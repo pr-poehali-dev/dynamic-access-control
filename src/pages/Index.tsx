@@ -192,6 +192,38 @@ export default function Index() {
           </div>
         </section>
 
+        <section className="section-padding">
+          <h2 className="section-title" style={{ marginBottom: "12px", textAlign: "center" }}>
+            ДЕТСКИЕ ТОРТЫ
+          </h2>
+          <p style={{ textAlign: "center", color: "#666", marginBottom: "40px", fontSize: "16px" }}>
+            Яркие торты с любимыми героями — безопасно, вкусно и незабываемо
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+            gap: "16px",
+          }}>
+            {[
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/199c1881-0237-40dd-b55b-147221e0d1bf.jpg", alt: "Торт с короной и бабочками" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/af4e2aaf-58d4-4a17-bb4c-78fdb466aadd.jpg", alt: "Торт Щенячий патруль" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/f305ef3b-9cda-4a5a-8f22-028e59ebc548.jpg", alt: "Торт Hello Kitty" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/23aa23a0-1dc6-4c53-b395-771138a7b720.jpg", alt: "Торт Lilo and Stitch" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/d342e574-2501-4af3-8a27-d52a96f48ee3.jpg", alt: "Торт Minecraft" },
+            ].map((img) => (
+              <div key={img.src} style={{ overflow: "hidden", aspectRatio: "3/4" }}>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.4s ease" }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="retro-vibe">
           <div>
             <h2 className="vibe-title">СДЕЛАНО С ДУШОЙ.</h2>
