@@ -274,11 +274,6 @@ export default function Index() {
               { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/d4fbce27-fc59-4864-94bf-a7a46c63850a.png", alt: "Белый торт с ягодами и кольцами" },
               { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/b50c4cfa-1df1-4fdc-9c98-30446425c80d.png", alt: "Белый торт с волнистой текстурой и гипсофилой" },
               { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/637a30dc-1887-4bb2-aff4-960c98970d0b.png", alt: "Сиреневый торт с розовыми цветами" },
-              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/098de497-fad8-46c3-a96b-8173041b878b.jpg", alt: "Белый свадебный торт с волнами" },
-              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/60550888-e5bc-4161-99de-4426e50d9f6c.jpg", alt: "Свадебный торт с ягодами и кольцами" },
-              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/057db2da-0f6a-471b-9608-22af2547276c.jpg", alt: "Мраморный торт с золотыми листьями" },
-              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/72d665ba-1427-4ff5-8eca-5980e3f81182.jpg", alt: "Сиреневый торт с цветами" },
-              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/573d9819-19fa-4cde-a658-91daa15a0c9b.jpg", alt: "Торт с пионами и розами" },
             ].map((img) => (
               <div key={img.src} style={{ overflow: "hidden", aspectRatio: "3/4" }}>
                 <img
