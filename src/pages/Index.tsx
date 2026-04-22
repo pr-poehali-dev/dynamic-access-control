@@ -256,6 +256,38 @@ export default function Index() {
           </div>
         </section>
 
+        <section className="section-padding">
+          <h2 className="section-title" style={{ marginBottom: "12px", textAlign: "center" }}>
+            СВАДЕБНЫЕ ТОРТЫ
+          </h2>
+          <p style={{ textAlign: "center", color: "#666", marginBottom: "40px", fontSize: "16px" }}>
+            Элегантные торты для самого важного дня в вашей жизни
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+            gap: "16px",
+          }}>
+            {[
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/098de497-fad8-46c3-a96b-8173041b878b.jpg", alt: "Белый свадебный торт с волнами" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/60550888-e5bc-4161-99de-4426e50d9f6c.jpg", alt: "Свадебный торт с ягодами и кольцами" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/057db2da-0f6a-471b-9608-22af2547276c.jpg", alt: "Мраморный торт с золотыми листьями" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/72d665ba-1427-4ff5-8eca-5980e3f81182.jpg", alt: "Сиреневый торт с цветами" },
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/573d9819-19fa-4cde-a658-91daa15a0c9b.jpg", alt: "Торт с пионами и розами" },
+            ].map((img) => (
+              <div key={img.src} style={{ overflow: "hidden", aspectRatio: "3/4" }}>
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform 0.4s ease" }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.04)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="retro-vibe">
           <div>
             <h2 className="vibe-title">СДЕЛАНО С ДУШОЙ.</h2>
