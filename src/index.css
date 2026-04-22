@@ -7,13 +7,13 @@
 @layer base {
   :root {
     /* Cake Studio theme variables */
-    --primary: #c96b6b;
-    --secondary: #9b6fa3;
-    --bg: #fdf6f0;
-    --dark: #2a1a1a;
-    --accent: #f7d9c4;
-    --border: 3px solid #1a1a1a;
-    --shadow: 8px 8px 0px #1a1a1a;
+    --primary: #4ab3c8;
+    --secondary: #e8935a;
+    --bg: #fdf8f4;
+    --dark: #1e2e35;
+    --accent: #fde8d0;
+    --border: 3px solid #1e2e35;
+    --shadow: 8px 8px 0px #1e2e35;
 
     /* Shadcn variables */
     --background: 0 0% 100%;
