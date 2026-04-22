@@ -269,6 +269,7 @@ export default function Index() {
             gap: "16px",
           }}>
             {[
+              { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/77148913-72dc-4f48-a3ca-aa611aa86617.png", alt: "Свадебный торт с ягодами и капкейками Mr & Mrs" },
               { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/8c0373d4-6920-44a7-95a9-9d57bd1e3bce.png", alt: "Торт фуксия с серебром и пионами" },
               { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/d4fbce27-fc59-4864-94bf-a7a46c63850a.png", alt: "Белый торт с ягодами и кольцами" },
               { src: "https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/b50c4cfa-1df1-4fdc-9c98-30446425c80d.png", alt: "Белый торт с волнистой текстурой и гипсофилой" },
