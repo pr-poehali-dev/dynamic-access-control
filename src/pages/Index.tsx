@@ -1,4 +1,34 @@
+import React from 'react';
+
+const SEND_ORDER_URL = 'https://functions.poehali.dev/7c379040-f9be-40ef-92cf-365b9a729e81';
+
 export default function Index() {
+  const [sending, setSending] = React.useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      const res = await fetch(SEND_ORDER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        alert(`Спасибо, ${data.name}! Заявка отправлена, мы свяжемся с вами в ближайшее время 🐱`);
+        form.reset();
+      } else {
+        alert('Не удалось отправить заявку. Попробуйте позже.');
+      }
+    } catch {
+      alert('Ошибка соединения. Попробуйте позже.');
+    } finally {
+      setSending(false);
+    }
+  }
+
   return (
     <>
       <div className="grain-overlay" />
@@ -220,13 +250,7 @@ export default function Index() {
             Расскажите о вашем празднике — мы свяжемся в течение часа
           </p>
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              const form = e.currentTarget;
-              const data = Object.fromEntries(new FormData(form));
-              alert(`Спасибо, ${data.name}! Мы свяжемся с вами в ближайшее время 🐱`);
-              form.reset();
-            }}
+            onSubmit={handleSubmit}
             style={{
               maxWidth: "600px",
               margin: "0 auto",
@@ -344,10 +368,11 @@ export default function Index() {
 
             <button
               type="submit"
+              disabled={sending}
               className="btn-cta"
-              style={{ background: "var(--primary)", color: "white", fontSize: "16px", padding: "16px 32px", alignSelf: "center" }}
+              style={{ background: "var(--primary)", color: "white", fontSize: "16px", padding: "16px 32px", alignSelf: "center", opacity: sending ? 0.7 : 1 }}
             >
-              Отправить заявку
+              {sending ? 'Отправляем...' : 'Отправить заявку'}
             </button>
           </form>
         </section>
