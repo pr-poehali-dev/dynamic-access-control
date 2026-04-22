@@ -211,6 +211,146 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        <section className="section-padding" style={{ background: "var(--dark)", color: "white" }}>
+          <h2 className="section-title" style={{ marginBottom: "12px", textAlign: "center", color: "white" }}>
+            ЗАКАЗАТЬ ТОРТ
+          </h2>
+          <p style={{ textAlign: "center", color: "#aaa", marginBottom: "40px", fontSize: "16px" }}>
+            Расскажите о вашем празднике — мы свяжемся в течение часа
+          </p>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const data = Object.fromEntries(new FormData(form));
+              alert(`Спасибо, ${data.name}! Мы свяжемся с вами в ближайшее время 🐱`);
+              form.reset();
+            }}
+            style={{
+              maxWidth: "600px",
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+            }}
+          >
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, fontSize: "12px", textTransform: "uppercase", marginBottom: "6px", color: "#ccc" }}>
+                  Ваше имя *
+                </label>
+                <input
+                  name="name"
+                  required
+                  placeholder="Анна"
+                  style={{
+                    width: "100%",
+                    padding: "12px 16px",
+                    border: "2px solid #444",
+                    background: "#2a2a2a",
+                    color: "white",
+                    fontSize: "14px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, fontSize: "12px", textTransform: "uppercase", marginBottom: "6px", color: "#ccc" }}>
+                  Телефон *
+                </label>
+                <input
+                  name="phone"
+                  required
+                  placeholder="+7 (___) ___-__-__"
+                  style={{
+                    width: "100%",
+                    padding: "12px 16px",
+                    border: "2px solid #444",
+                    background: "#2a2a2a",
+                    color: "white",
+                    fontSize: "14px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, fontSize: "12px", textTransform: "uppercase", marginBottom: "6px", color: "#ccc" }}>
+                  Дата праздника *
+                </label>
+                <input
+                  name="date"
+                  type="date"
+                  required
+                  style={{
+                    width: "100%",
+                    padding: "12px 16px",
+                    border: "2px solid #444",
+                    background: "#2a2a2a",
+                    color: "white",
+                    fontSize: "14px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, fontSize: "12px", textTransform: "uppercase", marginBottom: "6px", color: "#ccc" }}>
+                  Тип торта
+                </label>
+                <select
+                  name="type"
+                  style={{
+                    width: "100%",
+                    padding: "12px 16px",
+                    border: "2px solid #444",
+                    background: "#2a2a2a",
+                    color: "white",
+                    fontSize: "14px",
+                    outline: "none",
+                  }}
+                >
+                  <option value="">Выберите...</option>
+                  <option>Свадебный</option>
+                  <option>Детский</option>
+                  <option>Авторский</option>
+                  <option>Корпоративный</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label style={{ display: "block", fontWeight: 700, fontSize: "12px", textTransform: "uppercase", marginBottom: "6px", color: "#ccc" }}>
+                Пожелания
+              </label>
+              <textarea
+                name="message"
+                rows={4}
+                placeholder="Опишите желаемый дизайн, вкус, количество порций..."
+                style={{
+                  width: "100%",
+                  padding: "12px 16px",
+                  border: "2px solid #444",
+                  background: "#2a2a2a",
+                  color: "white",
+                  fontSize: "14px",
+                  resize: "vertical",
+                  outline: "none",
+                }}
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="btn-cta"
+              style={{ background: "var(--primary)", color: "white", fontSize: "16px", padding: "16px 32px", alignSelf: "center" }}
+            >
+              Отправить заявку
+            </button>
+          </form>
+        </section>
       </main>
 
       <footer>
