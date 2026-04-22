@@ -4,7 +4,14 @@ export default function Index() {
       <div className="grain-overlay" />
 
       <header className="header">
-        <div className="logo">ТОРТИК*ОТ*КОТИКА</div>
+        <div className="logo" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <img
+            src="https://cdn.poehali.dev/projects/d729598e-528b-4abd-bf49-e7e6e495015e/bucket/a206f501-6a79-4a1a-9994-de269686ba50.jpg"
+            alt="Тортик от Котика"
+            style={{ height: "52px", width: "52px", objectFit: "contain", borderRadius: "50%" }}
+          />
+          ТОРТИК*ОТ*КОТИКА
+        </div>
         <nav>
           <a href="#">Торты</a>
           <a href="#">О нас</a>
